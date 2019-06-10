@@ -1,3 +1,5 @@
+import { HeroService } from './services/hero.service';
+import { APP_ROUTING } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -6,7 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroComponent } from './components/hero/hero.component';
-import { AppRoutingModule } from './app-routing.module';
+import { DetailComponent } from './components/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +16,16 @@ import { AppRoutingModule } from './app-routing.module';
     HomeComponent,
     NavbarComponent,
     AboutComponent,
-    HeroComponent
+    HeroComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    HeroService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
