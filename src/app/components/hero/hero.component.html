@@ -1,13 +1,13 @@
 <h1>All Hero</h1>
 
-<div *ngFor="let item of heros" class="card-columns">
+<div *ngFor="let item of heros, let i = index" class="card-columns">
   <div class="card">
     <img [src]= "item.img"class="card-img-top" [alt]="item.nombre">
     <div class="card-body">
       <h5 class="card-title">{{item.nombre}}</h5>
       <p class="card-text">{{item.bio}}</p>
       <p class="card-text"><small class="text-muted">{{item.casa}} {{item.aparicion}}</small></p>
-      <button (click)="redirect($index)" class="btn btn-outline-primary" >More...</button> 
+      <button (click)='redirect(i)'  class="btn btn-outline-primary">More...</button>
     </div>
   </div>
 </div>

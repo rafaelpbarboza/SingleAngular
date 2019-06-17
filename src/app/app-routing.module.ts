@@ -8,7 +8,7 @@ const APP_ROUTER: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
   {path: 'hero', component: HeroComponent},
-  {path: 'detail', component: DetailComponent},
+  {path: 'detail/:id', component: DetailComponent},
   {path: '**', pathMatch: 'full', redirectTo: 'home'},
 ];
 

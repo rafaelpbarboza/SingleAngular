@@ -19,11 +19,9 @@ export class HeroComponent implements OnInit {
 
   ngOnInit() {
     this.heros = this.hero.getHero();
-    console.log(this.hero);
   }
 
   redirect(id: number) {
-    //this.route.navigate( ['/detail', id]);
-    console.log(id);
+    this.route.navigate( ['/detail', id]);
   }
 }
