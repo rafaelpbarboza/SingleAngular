@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { DetailComponent } from './components/detail/detail.component';
+import { SearchComponent } from './components/shared/search/search.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DetailComponent } from './components/detail/detail.component';
     NavbarComponent,
     AboutComponent,
     HeroComponent,
-    DetailComponent
+    DetailComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

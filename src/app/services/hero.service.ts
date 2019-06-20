@@ -57,11 +57,23 @@ export class HeroService {
 
     constructor() {}
 
+    public ArrayHero:Heros[];
+
     getHero(): Heros [] {
       return this.Hero;
     }
     getOneHero(id:number){
       return this.Hero[id]
+    }
+    
+    getSearchHero(ref:string){
+      ref = ref.toLowerCase();
+      for(let i of this.Hero){
+        let heroName = i.nombre.toLowerCase();
+          if(heroName.indexOf(ref) >= 0){
+              this.ArrayHero.push(i);
+          }
+      }
     }
 }
 
